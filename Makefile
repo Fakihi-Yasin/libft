@@ -1,5 +1,5 @@
 
-SRC = main.c 
+SRC = main.c ft_isalpha.c
 
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a 

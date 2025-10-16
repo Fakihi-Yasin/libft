@@ -6,13 +6,15 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:30:15 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/16 18:36:25 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/10/16 19:13:16 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // ctr alt h
-// #include <stdio.h>
+#include "libft.h"
+#include <stdio.h>
 
-// int main(){
-//     printf("hello world\n");
-// }
+int main(){
+    printf("%d\n",ft_isalpha('j'));
+    
+}

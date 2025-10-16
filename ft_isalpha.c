@@ -6,11 +6,12 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:21:37 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/16 18:40:16 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/10/16 23:13:21 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int ft_isalpha (int x){
     if((x >= 65 && x <= 90) || (x >= 97 && x <=122) )

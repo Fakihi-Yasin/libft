@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:21:37 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/16 18:40:16 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/16 18:29:36 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/16 18:39:56 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 
-int ft_isalpha (int x){
-    if((x >= 65 && x <= 90) || (x >= 97 && x <=122) )
+int ft_isdigit (int x){
+    if(x >= 48 && x <= 57)
         return (1); 
     return 0;
 }
 
 // int main (){
-//     printf("%d\n",ft_isalpha());
+//     printf("%d\n",ft_isdigit(58));
 // }

@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:56:55 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/16 23:13:17 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:48:40 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int ft_isalnum (int x){
 }
 
 
-int main (){
-    printf("%d\n",ft_isalnum(58));
-}
+// int main (){
+//     printf("%d\n",ft_isalnum(68));
+// }

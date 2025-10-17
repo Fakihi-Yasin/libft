@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:30:15 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/16 19:13:16 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/17 11:13:48 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/17 11:42:34 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ctr alt h
-#include "libft.h"
 #include <stdio.h>
 
-int main(){
-    printf("%d\n",ft_isalpha('j'));
-    
+int ft_isascii(int x){
+    if(x >= 0 && x <= 127)
+        return 1;
+    return 0;
 }
+
+// int main (){
+//     printf("%d\n", ft_isascii(-127));
+// }

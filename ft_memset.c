@@ -18,26 +18,11 @@ void *ft_memset(void *c, int a, size_t b){
     unsigned char * n;
     n = (unsigned*) c; //== adress c
 
-    while (b > 0)
-    {
-        *(n++) = (unsigned) a;
-        b--;
-    }
-
-    return c;
+{    while (b > 0)
+    *(n++) = (unsigned) a;
+    b--;
+}
+return c;
+    
 }
 
-int main(){
-    int x = 0;
-
-
-    ft_memset(&x, 1, 3);
-    ft_memset(&x, 217, 2);
-    ft_memset(&x, 124, 1);
-
-    printf("%d\n", x);
-    // 1337
-    // 999
-    // 2001
-    //121212
-}

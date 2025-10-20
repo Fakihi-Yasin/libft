@@ -13,16 +13,17 @@
 
 #include <stdio.h>
 
-void *ft_memset(void *c, int a, size_t b){
+void *ft_memset(void *b, int c, size_t len){
 
     unsigned char * n;
-    n = (unsigned*) c; //== adress c
+    n = (unsigned*) b; //== adress c
 
-{    while (b > 0)
-    *(n++) = (unsigned) a;
-    b--;
+{    while (len > 0)
+    *(n++) = (unsigned) c;
+    len--;
 }
-return c;
+return b;
     
 }
 
+/////////     test   -1337

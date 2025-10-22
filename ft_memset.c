@@ -16,7 +16,7 @@
 void *ft_memset(void *c, int a, size_t b){
 
     unsigned char * n;
-    n = (unsigned*) c; //== adress c
+    n = (unsigned*) c; //== adress c   // casting 
 
 {    while (b > 0)
     *(n++) = (unsigned) a;

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 18:20:12 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/25 15:09:25 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/25 21:29:50 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/25 22:43:08 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <stddef.h>
+#include <stdio.h>
 
-int ft_isalpha(int x);
-int ft_isdigit(int x);
-int ft_isalnum(int x);
-int ft_isascii(int x);
-int ft_isprint(int x);
-void *ft_memset(void *b, int c, size_t len);
-void ft_bzero(void *s, size_t n);
-size_t ft_strlen(const char *a);
+void *ft_calloc(size_t count, size_t size)
+{
 
+    unsigned char *tmp;
+    size_t i;
+    
+    i = 0;
 
-#endif
+    tmp = malloc(count * size);
+
+    if(!tmp)
+        return (NULL);
+    while (i < count  * size)
+    
+        tmp[i] = 0;
+        i++;
+    return (tmp);
+    
+    
+}

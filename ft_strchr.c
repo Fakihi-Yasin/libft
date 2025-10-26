@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/19 15:33:41 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/21 22:37:03 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/21 23:30:42 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *a){
-    size_t i = 0;
-    while (a[i])
-    i++;
-    return(i);   
-}
+char *ft_strchr(const char *s, int c)
+{
+    int i = 0;
+   
 
-// int main (){
-//     printf("%zu\n", ft_strlen("   "));
-//     printf("%zu\n", ft_strlen("eeee"));
-//     printf("%zu\n", ft_strlen(",e ,  eeeaa3"));
-// }
+    while (s[i] && s[i] != (char)c)
+        i++;
+    
+    if( s[i] == (char) c )
+        return ((char *)s + i);
+    
+    return NULL;
+}
+int main() {
+    char str[] = "salam aalikom";
+    char *p = ft_strchr(str, ' ');
+
+
+       printf("%s\n", p);  
+}

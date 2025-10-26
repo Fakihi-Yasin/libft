@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/19 15:33:41 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/19 16:18:21 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/19 17:35:58 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *a){
-    size_t i = 0;
-    while (a[i])
-    i++;
-    return(i);   
+#include "libft.h"
+
+void    ft_bzero(void *s, size_t n)
+{
+    char    *str;
+    
+    str = (char *) s;
+    while (n > 0)
+    {
+        *(str++) = 0;
+         n--;
+    }
 }
 
-// int main (){
-//     printf("%zu\n", ft_strlen("   "));
-//     printf("%zu\n", ft_strlen("eeee"));
-//     printf("%zu\n", ft_strlen(",e ,  eeeaa3"));
-// }
+
+int main (){
+    char str[] = "yassin";
+    printf("%s\n", str);
+    ft_bzero(str, sizeof(char *));
+    printf("%s\n", str);
+}

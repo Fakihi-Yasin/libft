@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/19 15:33:41 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/20 18:42:23 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/20 19:05:59 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *a){
-    size_t i = 0;
-    while (a[i])
-    i++;
-    return(i);   
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+    int i = 0;
+    size_t lensrc = ft_strlen(src);
+    size_t lendst = ft_strlen(dst);
+
+    if(dstsize < lendst)
+        return dstsize + lensrc;
+        
+    while (dst[i] != '\0' && i < dstsize)
+    {
+        dst[lendst +1] = src[i];
+    }
+    dst[lendst] = '\0';
+
+    return lendst + lensrc;
 }
-
-// int main (){
-//     printf("%zu\n", ft_strlen("   "));
-//     printf("%zu\n", ft_strlen("eeee"));
-//     printf("%zu\n", ft_strlen(",e ,  eeeaa3"));
-// }

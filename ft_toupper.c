@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/19 15:33:41 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/21 15:53:10 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/21 16:01:51 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *a){
-    size_t i = 0;
-    while (a[i])
-    i++;
-    return(i);   
+int    ft_toupper(int c)
+{
+    if(c >= 97 && c <= 122)
+        return (c - 32);
+    return c;
 }
 
-// int main (){
-//     printf("%zu\n", ft_strlen("   "));
-//     printf("%zu\n", ft_strlen("eeee"));
-//     printf("%zu\n", ft_strlen(",e ,  eeeaa3"));
-// }
+int main (){
+    printf("%d\n", ft_toupper(99));
+}

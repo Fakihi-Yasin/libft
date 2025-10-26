@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/19 15:33:41 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/22 09:45:16 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/22 11:26:52 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *a){
-    size_t i = 0;
-    while (a[i])
-    i++;
-    return(i);   
+void *ft_memcpy(void *dst, const void *src, size_t n)
+{
+    unsigned char *d = dst;
+    const unsigned char *s = src;
+
+    while (n--)
+        *d++ = *s++;
+    
+    return dst;
 }
 
-// int main (){
-//     printf("%zu\n", ft_strlen("   "));
-//     printf("%zu\n", ft_strlen("eeee"));
-//     printf("%zu\n", ft_strlen(",e ,  eeeaa3"));
+// int main(){
+//     char s[] = "ususuusd";
+//     char d[12];
+//     ft_memcpy(d, s, 7);
+//      d[7] = '\0'; 
+//     printf("dest is %s\n", d);
 // }

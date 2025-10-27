@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 09:45:16 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/23 10:28:51 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/10/24 21:33:27 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/10/24 23:03:14 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    unsigned char *d = (unsigned *)dst;
-    const unsigned char *s =(unsigned *)src;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-      if (dst == (void *)0 && src == (void *)0)
-        return (dst); 
-        
-    while (n--)
-        *d++ = *s++;
-    return dst;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (0);	
 }
 
-// int main(){
-//     char s[] = "ususuusd";
-//     char d[12];
-//     ft_memcpy(d, s, 0);
-//      d[7] = '\0'; 
-//     printf("dest is %s\n", d);
-// }
+
+int main()
+{
+    char a[] = "ABC";
+char b[] = "ABD";
+
+printf("%d\n", ft_memcmp(a, b, 3)); // resultat negatif hit 'C' < 'D'
+
+}

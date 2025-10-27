@@ -6,12 +6,13 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:20:12 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/20 06:16:43 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:09:25 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
+#include <stddef.h>
 
 int ft_isalpha(int x);
 int ft_isdigit(int x);

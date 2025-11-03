@@ -34,6 +34,17 @@ static size_t  c_words(const char *s, char c)
 	}
     return count;
 }
+static size_t word_len(const char *s, char c)
+{
+    int len = 0;
+
+    while (*s != c && *s != '\0')
+    {
+        len++;
+        s++;
+    }
+    return len;
+}
 
 static size_t word_len(const char *s, char c)
 {

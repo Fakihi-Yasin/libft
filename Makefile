@@ -9,7 +9,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 OBJ = $(SRC:.c=.o)   
 
-all: $(LIBFT)        
+all: $(LIBFT)        	
 
 $(LIBFT): $(OBJ)
 	ar rcs $(LIBFT) $(OBJ)   

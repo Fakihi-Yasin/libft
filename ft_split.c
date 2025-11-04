@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/03 00:11:38 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:58:23 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,6 @@ static size_t  c_words(const char *s, char c)
 			s++;
 	}
     return count;
-}
-static size_t word_len(const char *s, char c)
-{
-    int len = 0;
-
-    while (*s != c && *s != '\0')
-    {
-        len++;
-        s++;
-    }
-    return len;
 }
 
 static size_t word_len(const char *s, char c)
@@ -75,23 +64,6 @@ static char *cr_string(const char *s, char c)
     word[i] = '\0';
     return word;
 }
-// static char *cr_string(const char *s, char c)
-// {
-//     int len = c_words(s,c);
-//     char *word = malloc(len + 1);
-//     int i;
-
-//     i = 0;
-//     if(!word)
-//         return NULL;
-//     while (i < 0)
-//     {
-//         word[i] = s[i];
-//         i++;
-//     }
-//     word[i] = '\0';
-//     return word;
-// }
 
 
 static void	free_all(char **ptr)

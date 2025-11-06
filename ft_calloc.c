@@ -6,28 +6,21 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 21:29:50 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:49:27 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 23:36:02 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*p;
+	void	*array;
 
-	if ((int) count < 0 || (int) size < 0)
+	if (size && nmemb > __SIZE_MAX__ / size)
 		return (NULL);
-	p = malloc(count * size);
-	if (!p)
+	array = (void *)malloc(nmemb * size);
+	if (array == NULL)
 		return (NULL);
-	ft_bzero(p, count * size);
-	return (p);
+	ft_bzero(array, (nmemb * size));
+	return (array);
 }
-
-// malloc → OS heap manager kayallocate exact memory li tlabt
-
-// bzero → katclear content li garbage f memory
-
-// pointer → give address l CPU / program bach t9der t5dm 3lih
-//////heap = big warehouse. malloc = reserving exact number of shelves. bzero = cleaning shelves before use.//////////////////

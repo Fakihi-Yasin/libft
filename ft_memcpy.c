@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		*((unsigned char *) dst) = *((unsigned char *) src);
+		*((unsigned char *)dst) = *((unsigned char *)src);
 		i++;
 		src++;
 		dst++;
@@ -35,6 +35,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //     char s[] = "ususuusd";
 //     char d[12];
 //     ft_memcpy(d, s, 0);
-//      d[7] = '\0'; 
+//      d[7] = '\0';
 //     printf("dest is %s\n", d);
 // }

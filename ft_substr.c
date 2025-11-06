@@ -10,31 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
-	size_t	i;
-    i = 0;
-    
+	char	*new;
+	size_t	slen;
+	size_t	finish;
+
 	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s + start)) //&& s[start + i] = mnin tewsel '\0'  , Stops at string end, no overflow
-		len = ft_strlen(s + start);
-	ptr = (char *)malloc(len + 1);
-	if (!ptr)
-		return (NULL);
-	while (i < len ) 
+		return (0);
+	slen = ft_strlen(s);
+	if (start >= slen)
 	{
-		ptr[i] = s[start + i];
-		i++;
+		new = (char *)malloc(sizeof(char) * 1);
+		if (!new)
+			return (0);
+		new[0] = '\0';
+		return (new);
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	finish = 0;
+	if (start < slen)
+		finish = slen - start;
+	if (finish > len)
+		finish = len;
+	new = (char *)malloc(sizeof(char) * (finish + 1));
+	if (!new)
+		return (0);
+	ft_strlcpy(new, s + start, finish + 1);
+	return (new);
 }
 //////// 	if (len > ft_strlen(s + start))
 // s + start ma kayjme3ch string,

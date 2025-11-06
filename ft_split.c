@@ -10,19 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int     ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
-
-static size_t  c_words(const char *s, char c)
+static size_t	c_words(const char *s, char c)
 {
-    int count;
-    count = 0;
-    while (*s)
+	int	count;
+
+	count = 0;
+	while (*s)
 	{
 		while (*s == c && *s)
 			s++;
@@ -31,39 +30,41 @@ static size_t  c_words(const char *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
-    return count;
+	return (count);
 }
 
-static size_t word_len(const char *s, char c)
+static size_t	word_len(const char *s, char c)
 {
-    int len;
+	int	len;
 
-    len = 0;
-    while (*s != c && *s != '\0'){
-			len++;
-            s++;
-    }
-  return len;
+	len = 0;
+	while (*s != c && *s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
-static char *cr_string(const char *s, char c)
+static char	*cr_string(const char *s, char c)
 {
-    int len = word_len(s, c);
-    char *word = malloc(len + 1);
-    int i;
+	int		len;
+	char	*word;
+	int		i;
 
-    if (!word)
-        return NULL;
-    i = 0;
-    while (i < len)
-    {
-        word[i] = s[i];
-        i++;
-    }
-    word[i] = '\0';
-    return word;
+	len = word_len(s, c);
+	word = malloc(len + 1);
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
-
 
 static void	free_all(char **ptr)
 {
@@ -107,9 +108,6 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-
-
-
 //     int main(void)
 // {
 //     char *s = "Hello rerg gre erg";
@@ -119,10 +117,8 @@ char	**ft_split(char const *s, char c)
 //     res = c_words(s,c);
 //     printf("Result: %d\n", res);
 
-//     return 0;
+//     return (0);
 // }
-
-
 
 // int main(void)
 // {
@@ -130,5 +126,5 @@ char	**ft_split(char const *s, char c)
 //     printf("%zu\n", word_len("  leading", ' '));   // 0 (start is delimiter)
 //     printf("%zu\n", word_len("a", ' '));           // 1
 //     printf("%zu\n", word_len("", ' '));            // 00
-//     return 0;
+//     return (0);
 // }

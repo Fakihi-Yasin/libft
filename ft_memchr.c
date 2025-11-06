@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 #include <stddef.h>
+#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -23,7 +22,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	str = (unsigned char *)s;
 	ch = (unsigned char)c;
 	i = 0;
-
 	while (i < n)
 	{
 		if (str[i] == ch)
@@ -32,5 +30,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-

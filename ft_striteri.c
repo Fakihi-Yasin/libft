@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -33,7 +33,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 // ft_striteri edits the original one
 
-void upper(unsigned int i, char *c)
+void	upper(unsigned int i, char *c)
 {
 	(void)i;
 	if (*c >= 'a' && *c <= 'z')
@@ -44,5 +44,5 @@ void upper(unsigned int i, char *c)
 // {
 // 	char str[] = "dsdfsd";
 // 	ft_striteri(str, upper);
-// 	printf("%s\n", str); 
+// 	printf("%s\n", str);
 // }

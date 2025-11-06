@@ -12,21 +12,20 @@
 
 #include <stdio.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t i = 0;
-    
-    if (n == 0)
-        return 0;
-    
-    while ((s1[i] || s2[i])&& i < n)
-    {
-        if((unsigned char) s1[i] != (unsigned char) s2[i])
-            return ((unsigned char) s1[i] - (unsigned char) s2[i]);
-        i++;
-    }
-    return 0;
-    
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 // #include <stdio.h>
@@ -37,5 +36,6 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 //     printf("%d\n", ft_strncmp("Hello", "Hello", 5)); // 0 (pareils)
 //     printf("%d\n", ft_strncmp("Hello", "Helli", 5)); // >0 ('o' > 'i')
 //     printf("%d\n", ft_strncmp("Hell", "Hello", 5));  // <0 ('\0' < 'o')
-//     printf("%d\n", ft_strncmp("Hello", "Hi", 1));    // 0 (seulement 1 char: 'H' == 'H')
+//     printf("%d\n", ft_strncmp("Hello", "Hi", 1));
+// 0 (seulement 1 char: 'H' == 'H')
 // }

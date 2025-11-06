@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:21:37 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/05 11:47:46 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/11/06 15:38:37 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/11/06 15:38:42 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_isalpha (int c){
-    if((c >= 65 && c <= 90) || (c >= 97 && c <=122) )
-        return (1); 
-    return 0;
-}
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*head;
+	t_list	*p;
+	void	*cont;
 
-// int main (){
-//     printf("%d\n",ft_isalpha());
-// }
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
+	head = NULL;
+	while (lst)
+	{
+		cont = f(lst->content);
+		p = ft_lstnew(cont);
+		if (!p)
+		{
+			del(cont);
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, p);
+		lst = lst->next;
+	}
+	return (head);
+}

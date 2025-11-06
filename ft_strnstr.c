@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:47:49 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/24 23:06:21 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:48:19 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (0);
 }
 
-int main()
-{
-    char hay[] = "Hello World!";
-    char needle[] = "World";
+// int main()
+// {
+//     char hay[] = "Hello World!";
+//     char needle[] = "World";
 
-    // search in the first 8 chars only
-    printf("%s\n", ft_strnstr(hay, needle, 8));  // NULL (not found)
+//     // search in the first 8 chars only
+//     printf("%s\n", ft_strnstr(hay, needle, 8));  // NULL (not found)
 
-    // search in the first 12 chars
-    printf("%s\n", ft_strnstr(hay, needle, 12)); // "World!"
-}
+//     // search in the first 12 chars
+//     printf("%s\n", ft_strnstr(hay, needle, 12)); // "World!"
+// }

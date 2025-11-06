@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 22:37:03 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/24 09:56:07 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:47:10 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char *ft_strchr(const char *s, int c)
     
     return NULL;
 }
-int main() {
-    char str[] = "salam aalikom";
-    char *p = ft_strchr(str, ' ');
-       printf("%s\n", p);  
-}
+// int main() {
+//     char str[] = "salam aalikom";
+//     char *p = ft_strchr(str, ' ');
+//        printf("%s\n", p);  
+// }

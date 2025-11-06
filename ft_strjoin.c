@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:13:56 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/28 11:09:40 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:47:35 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,15 @@ char *ft_strjoin(const char *s1, const char *s2)
     return res; 
 }
 
-int main(void)
-{
-    char *s1 = "Hello";
-    char *s2 = " World";
-    char *joined;
+// int main(void)
+// {
+//     char *s1 = "Hello";
+//     char *s2 = " World";
+//     char *joined;
 
-    joined = ft_strjoin(s1, s2);
-    printf("Result: %s\n", joined);
+//     joined = ft_strjoin(s1, s2);
+//     printf("Result: %s\n", joined);
 
-    free(joined); // always free the memory after use
-    return 0;
-}
+//     free(joined); // always free the memory after use
+//     return 0;
+// }

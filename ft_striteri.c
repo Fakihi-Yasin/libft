@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:30:10 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/03 16:51:01 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:46:59 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void upper(unsigned int i, char *c)
 		*c = *c - 32;
 }
 
-int main()
-{
-	char str[] = "dsdfsd";
-	ft_striteri(str, upper);
-	printf("%s\n", str); 
-}
+// int main()
+// {
+// 	char str[] = "dsdfsd";
+// 	ft_striteri(str, upper);
+// 	printf("%s\n", str); 
+// }

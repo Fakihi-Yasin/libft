@@ -6,14 +6,14 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:39:13 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/17 11:46:50 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:48:25 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_isprint(int x){
-    if(x >= 32 && x <= 126)
+int ft_isprint(int c){
+    if(c >= 32 && c <= 126)
         return 1;
     return 0;
 }

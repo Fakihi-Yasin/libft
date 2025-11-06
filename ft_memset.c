@@ -12,18 +12,17 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned char	*n;
+	size_t			i;
 
-void *ft_memset(void *b, int c, size_t len){
-
-    unsigned char * n;
-    n = (unsigned*) b; //== adress c
-
-{    while (len > 0)
-    *(n++) = (unsigned) c;
-    len--;
+	n = (unsigned char *)b;
+	i = 0;
+	while (i < len)
+	{
+		n[i] = (unsigned char)c;
+		i++;
+	}
+	return (b);
 }
-return b;
-    
-}
-
-/////////     test   -1337

@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:21:37 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/05 11:47:46 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/11/05 11:53:25 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/11/05 23:32:29 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_isalpha (int c){
-    if((c >= 65 && c <= 90) || (c >= 97 && c <=122) )
-        return (1); 
-    return 0;
-}
+void	ft_putnbr_fd(int n, int fd)
+{
+	unsigned int	nb;
+	char			c;
 
-// int main (){
-//     printf("%d\n",ft_isalpha());
-// }
+	nb = 0;
+	if (fd < 0)
+		return ;
+	if (n < 0)
+	{
+		nb = -1 * n;
+		write(fd, "-", 1);
+	}
+	else
+		nb = n;
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	if (nb <= 9 && nb >= 0)
+	{
+		c = nb + '0';
+		write(fd, &c, 1);
+	}
+}

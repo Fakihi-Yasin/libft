@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 09:04:33 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/24 11:06:49 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:48:25 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,20 @@ char *ft_strrchr(const char *s, int c)
     
 }
 
-#include <stdio.h>
 
-int main(void)
-{
-    char str[] = "banana";
-    char *p;
+// int main(void)
+// {
+//     char str[] = "banana";
+//     char *p;
 
-    p = ft_strrchr(str, 'a');  // should return last 'a'
-    printf("%s\n", p);         // prints "a""
+//     p = ft_strrchr(str, 'a');  // should return last 'a'
+//     printf("%s\n", p);         // prints "a""
 
-    p = ft_strrchr(str, 'z');  // not found
-    printf("%p\n", p);         // prints 0 / NULL
+//     p = ft_strrchr(str, 'z');  // not found
+//     printf("%p\n", p);         // prints 0 / NULL
 
-    p = ft_strrchr(str, '\0'); // null terminator
-    printf("%s\n", p);         // prints "" (empty string)
-}
+//     p = ft_strrchr(str, '\0'); // null terminator
+//     printf("%s\n", p);         // prints "" (empty string)
+// }
 
 

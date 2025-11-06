@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:46:10 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/24 16:48:50 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:45:34 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 
-int main(){
-
-    char str[] = "Hello";
-char *ptr = ft_memchr(str, 'l', 5);
-
-if (ptr)
-	printf("Found: %c\n", *ptr); // Output: Found: l
-else
-	printf("Not found\n");
-
-}

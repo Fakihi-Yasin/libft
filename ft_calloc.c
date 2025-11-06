@@ -6,31 +6,23 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 21:29:50 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/26 11:58:24 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:49:27 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
+	void	*p;
 
-    unsigned char *tmp;
-    size_t i;
-    
-    i = 0;
-
-    tmp = malloc(count * size);
-
-    if(!tmp)
-        return (NULL);
-    while (i < count  * size)
-    
-        tmp[i] = 0;
-        i++;
-    return (tmp);
-    
-    
+	if ((int) count < 0 || (int) size < 0)
+		return (NULL);
+	p = malloc(count * size);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, count * size);
+	return (p);
 }
 
 // malloc → OS heap manager kayallocate exact memory li tlabt

@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:39:06 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/04 12:42:39 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/05 00:26:25 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 	else
 		*lst = new;
-}
-
-void    ft_lstadd_fron(t_list **lst, t_list *new)
-{
-    if(!lst || !new)
-        return ;
-        if(*lst)
 }

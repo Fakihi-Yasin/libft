@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:21:37 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/05 11:47:46 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/11/05 11:31:33 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/11/05 11:55:21 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_isalpha (int c){
-    if((c >= 65 && c <= 90) || (c >= 97 && c <=122) )
-        return (1); 
-    return 0;
-}
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*last;
 
-// int main (){
-//     printf("%d\n",ft_isalpha());
-// }
+	if (new == NULL || lst == NULL)
+		return ;
+	if (!*lst)
+		*lst = new;
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
+}

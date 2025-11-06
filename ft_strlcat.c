@@ -6,27 +6,36 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:42:23 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/20 19:05:59 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:40:59 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    int i = 0;
-    size_t lensrc = ft_strlen(src);
-    size_t lendst = ft_strlen(dst);
+	size_t	i;
+	size_t	d_len;
+	size_t	s_len;
+	size_t	l_retu;
 
-    if(dstsize < lendst)
-        return dstsize + lensrc;
-        
-    while (dst[i] != '\0' && i < dstsize)
-    {
-        dst[lendst +1] = src[i];
-    }
-    dst[lendst] = '\0';
-
-    return lendst + lensrc;
+	if (!dst && src && dstsize == 0)
+		return (ft_strlen(src));
+	i = 0;
+	d_len = ft_strlen(dst);
+	s_len = ft_strlen(src);
+	if (dstsize >= d_len)
+		l_retu = s_len + d_len;
+	else
+		l_retu = s_len + dstsize;
+	if (dstsize == 0 || !dst)
+		return (l_retu);
+	while (src[i] != '\0' && d_len < dstsize - 1)
+	{
+		dst[d_len] = src[i];
+		i++;
+		d_len++;
+	}
+	dst[d_len] = '\0';
+	return (l_retu);
 }

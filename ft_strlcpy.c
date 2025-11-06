@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/20 18:23:59 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:47:42 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ size_t    ft_strlcpy(char *dst, const char *src, size_t dstsize)
     return (src_len);
 }
 
-int main (void){
-    char dst[10];
-    char *src = "jhjhjh";
-    size_t len = ft_strlcpy(dst, src, sizeof(dst));
-      printf("Copied: %s\n", dst);
-    printf("Source length: %zu\n", len);
-    return 0;
+// int main (void){
+//     char dst[10];
+//     char *src = "jhjhjh";
+//     size_t len = ft_strlcpy(dst, src, sizeof(dst));
+//       printf("Copied: %s\n", dst);
+//     printf("Source length: %zu\n", len);
+//     return 0;
     
-}
+// }

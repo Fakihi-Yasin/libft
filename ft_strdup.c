@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/03 00:18:21 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:47:05 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ char *ft_strdup(const char *s1)
 
 //5  Return the pointer to the new duplicated string.
 
-int main()
-{
-    char str[] = "hello";
-    char *dup = ft_strdup(str);
+// int main()
+// {
+//     char str[] = "hello";
+//     char *dup = ft_strdup(str);
 
-    printf("Original: %s\n", str);
-    printf("Duplicate: %s\n", dup);
+//     printf("Original: %s\n", str);
+//     printf("Duplicate: %s\n", dup);
 
-    free(dup);
-}
+//     free(dup);
+// }

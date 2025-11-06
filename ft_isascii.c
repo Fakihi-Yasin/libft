@@ -6,14 +6,14 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:13:48 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/17 11:42:34 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:47:57 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_isascii(int x){
-    if(x >= 0 && x <= 127)
+int ft_isascii(int c){
+    if(c >= 0 && c <= 127)
         return 1;
     return 0;
 }

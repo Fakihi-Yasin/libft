@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 15:53:10 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/21 16:01:51 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:48:45 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int    ft_toupper(int c)
     return c;
 }
 
-int main (){
-    printf("%d\n", ft_toupper(99));
-}
+// int main (){
+//     printf("%d\n", ft_toupper(99));
+// }

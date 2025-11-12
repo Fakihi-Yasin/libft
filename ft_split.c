@@ -6,13 +6,11 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:46:10 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:28:39 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 

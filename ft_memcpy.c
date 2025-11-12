@@ -6,12 +6,12 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 09:45:16 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:40:01 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:55:33 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	void	*ptr;
@@ -31,10 +31,28 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (ptr);
 }
 
-// int main(){
-//     char s[] = "ususuusd";
-//     char d[12];
-//     ft_memcpy(d, s, 0);
-//      d[7] = '\0';
-//     printf("dest is %s\n", d);
-// }
+int main(void)
+{
+	char src[] = "Hello, world!";
+	char dest[20];
+
+	// Copy 13 characters + '\0'
+	ft_memcpy(dest, src, 14);
+
+	printf("Source: %s\n", src);
+	printf("Destination: %s\n", dest);
+
+	// Test 2: Copy partial
+	char part[6];
+	ft_memcpy(part, src, 5);
+	part[5] = '\0';
+	printf("Partial copy: %s\n", part);
+
+	// Test 3: Overlapping (undefined behavior)
+	// Demonstrates why memmove exists
+	char overlap[] = "123456789";
+	ft_memcpy(overlap + 2, overlap, 5); // dangerous
+	printf("Overlap test (undefined): %s\n", overlap);
+
+	return 0;
+}

@@ -6,13 +6,11 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:46:10 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:49:08 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -108,6 +106,20 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
+// int main(void)
+// {
+//     char **words = ft_split("  hakf net sad  ", ' ');
+//     int i = 0;
+
+//     while (words && words[i])
+//     {
+//         printf("[%s]\n", words[i]);
+//         i++;
+//     }
+
+//     free_all(words);
+// }
+
 //     int main(void)
 // {
 //     char *s = "Hello rerg gre erg";
@@ -123,8 +135,8 @@ char	**ft_split(char const *s, char c)
 // int main(void)
 // {
 //     printf("%zu\n", word_len("hello world", ' ')); // 5
-//     printf("%zu\n", word_len("  leading", ' '));   // 0 (start is delimiter)
+//     printf("%zu\n", word_len("  leading", ' '));   // 0
 //     printf("%zu\n", word_len("a", ' '));           // 1
-//     printf("%zu\n", word_len("", ' '));            // 00
+//     printf("%zu\n", word_len("", ' '));            // 0
 //     return (0);
 // }

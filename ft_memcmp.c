@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 21:33:27 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:45:38 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:49:58 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main(void)
+// {
+//     char s1[] = "ABC";
+//     char s2[] = "ABD";
+
+//     printf("%d\n", ft_memcmp(s1, s2, 3)); 
+//     printf("%d\n", ft_memcmp(s1, s1, 3)); 
+//     printf("%d\n", ft_memcmp(s2, s1, 3)); 
+// }

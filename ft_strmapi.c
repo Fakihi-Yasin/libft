@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:27:13 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:48:12 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/13 05:52:07 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new);
 }
 
-char	t_ft_toupper(unsigned int i, char c)
-{
-	char	letter;
 
-	i = 0;
-	if (ft_isascii(c) == 0)
-		return (c);
-	letter = (char)c;
-	if (letter >= 'a' && letter <= 'z')
-		return ((char)(c - 32));
-	return (c);
-}
+
+
+// char	t_ft_toupper(unsigned int i, char c)
+// {
+// 	char	letter;
+
+// 	i = 0;
+// 	if (ft_isascii(c) == 0)
+// 		return (c);
+// 	letter = (char)c;
+// 	if (letter >= 'a' && letter <= 'z')
+// 		return ((char)(c - 32));
+// 	return (c);
+// }
 // int	main(void)
 // {
 // 	char	*s1;

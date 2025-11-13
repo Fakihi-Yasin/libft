@@ -6,11 +6,11 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:08:06 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/03 00:05:09 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:57:56 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -29,7 +29,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 // #include <stdio.h>
-// #include "libft.h"
 
 // int main(void)
 // {

@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:47:05 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/13 05:21:51 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,20 @@ char	*ft_strdup(const char *s1)
 //     printf("Duplicate: %s\n", dup);
 
 //     free(dup);
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     char *original = "Raja";
+//     char *copy = ft_strdup(original);
+
+//     printf("Original: %s\n", original);
+//     printf("Copy: %s\n", copy);
+
+//     copy[0] = 'M';  // modify copy
+//     printf("After change -> Original: %s | Copy: %s\n", original, copy);
+
+//     free(copy); // prevent memory leak
 // }

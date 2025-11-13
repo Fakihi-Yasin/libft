@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 16:18:21 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/13 17:53:52 by yafakihi         ###   ########.fr       */
+/*   Created: 2025/11/13 20:06:01 by yafakihi          #+#    #+#             */
+/*   Updated: 2025/11/13 20:06:09 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char	*str;
-    if (!s)
-        return;
-	str = (char *)s;
-	while (n > 0)
+	if (!lst || !new)
+		return ;
+	if (*lst)
 	{
-		*(str++) = 0;
-		n--;
+		new->next = *lst;
+		*lst = new;
 	}
+	else
+		*lst = new;
 }
-
-// int main (){
-//     char str[] = "yassin";
-//     printf("%s\n", str);
-//     ft_bzero(str, sizeof(char *));
-//     printf("%s\n", str);
-// }

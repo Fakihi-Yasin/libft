@@ -6,30 +6,29 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/03 00:18:21 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:47:05 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
-#include "libft.h"
-
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    char *dest;
-    size_t i;
-    dest = (char *) malloc(ft_strlen(s1) + 1);
-    if (!dest)
-        return (NULL);
-    i = 0;
-    while (s1[i])
-    {
-        
-        dest[i] = s1[i];
-        i++;
-    }
-    dest[i] = 0;
-    return (dest);
+	char	*dest;
+	size_t	i;
+
+	dest = (char *)malloc(ft_strlen(s1) + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
 }
 // How it works step-by-step:
 
@@ -46,13 +45,13 @@ char *ft_strdup(const char *s1)
 
 //5  Return the pointer to the new duplicated string.
 
-int main()
-{
-    char str[] = "hello";
-    char *dup = ft_strdup(str);
+// int main()
+// {
+//     char str[] = "hello";
+//     char *dup = ft_strdup(str);
 
-    printf("Original: %s\n", str);
-    printf("Duplicate: %s\n", dup);
+//     printf("Original: %s\n", str);
+//     printf("Duplicate: %s\n", dup);
 
-    free(dup);
-}
+//     free(dup);
+// }

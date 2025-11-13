@@ -23,5 +23,3 @@ t_list	*ft_lstnew(void *content)
 	p->next = NULL;
 	return (p);
 }
-
-

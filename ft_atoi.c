@@ -6,13 +6,12 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:43:43 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/25 15:09:21 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:48:55 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -41,11 +40,11 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-int main(void)
-{
-	printf("%d\n", ft_atoi("   42"));
-	printf("%d\n", ft_atoi("-123"));
-	printf("%d\n", ft_atoi("+7"));
-	printf("%d\n", ft_atoi("   \t\n56abc"));
-	printf("%d\n", ft_atoi("abc"));
-}
+// int main(void)
+// {
+// 	printf("%d\n", ft_atoi("   42"));
+// 	printf("%d\n", ft_atoi("-123"));
+// 	printf("%d\n", ft_atoi("+7"));
+// 	printf("%d\n", ft_atoi("   \t\n56abc"));
+// 	printf("%d\n", ft_atoi("abc"));
+// }

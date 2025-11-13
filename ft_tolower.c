@@ -6,19 +6,19 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:03:03 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/21 16:08:41 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:48:36 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
+#include <stdio.h>
 
-int    ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if(c >= 65 && c <= 90 )
-        return (c + 32);
-    return c;
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
 
-int main (){
-    printf("%d\n", ft_tolower(66));
-}
+// int main (){
+//     printf("%d\n", ft_tolower(66));
+// }

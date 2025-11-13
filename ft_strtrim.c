@@ -6,13 +6,13 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 11:19:40 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/28 16:55:18 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/06 23:37:33 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	is_existe(char const c, const char *set)
+static int	is_existe(char const c, const char *set)
 {
 	while (*set)
 	{

@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst > src)
 	{
 		while (len--)
-			*((char *)dst + len) = *((char *)src + len);
+			*((char *)dst + len) = *((char *)src + len); // * dereference to get the value at the address
 	}
 	else
 		ft_memcpy(dst, src, len);

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -30,6 +29,7 @@ char	*ft_strdup(const char *s1)
 	dest[i] = 0;
 	return (dest);
 }
+
 // How it works step-by-step:
 
 //1  Count the length of the original string s

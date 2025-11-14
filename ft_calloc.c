@@ -18,6 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (size && count > __SIZE_MAX__ / size)
 		return (ft_strdup(""));
+	
 	p = malloc(count * size);
 	if (p == NULL)
 		return (NULL);
@@ -25,25 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 	return (p);
 }
 
-// int	main(void)
-// {
-// 	int	*ptr;
-
-// 	ptr = (int *)ft_calloc(0, sizeof(int));
-// 	if (ptr == NULL)
-// 	{
-// 		printf("Error in ft_calloc Function ❌\n");
-// 	}
-// 	else
-// 	{
-// 		printf("ft_calloc Function is Correct ✅\n");
-// 		free(ptr);
-// 	}
-// }
-
-// malloc → OS heap manager kayallocate exact memory li tlabt
-
-// bzero → katclear content li garbage f memory
-
-// pointer → give address l CPU / program bach t9der t5dm 3lih
-//////heap = big warehouse. malloc = reserving exact number of shelves. bzero = cleaning shelves before use.//////////////////

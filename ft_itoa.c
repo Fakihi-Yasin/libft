@@ -45,9 +45,6 @@ static int	v_absolut(int n, int *sign)
 
 static void	f_stoc(char *p, int len, int *sign, int n)
 {
-	int	i;
-
-	i = 0;
 	if (*sign == 0)
 	{
 		p[0] = '-';

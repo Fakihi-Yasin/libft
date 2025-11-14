@@ -14,17 +14,19 @@
 
 int	ft_atoi(const char *str)
 {
-	int					i;
-	int					sign;
-	unsigned long int	result;
+	int				i; 			// index to traverse the string
+	int				sign;		// to save the sign of the number
+	unsigned long 	result; 	// save to theme values // insigned long to aviod overflow // 8 baytes in - 64bits
 
-	if (!str)
+	if (!str|| str[0] == '\0') 	// protect against null pointer
 		return 0;
+
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r')) // skip whitespace characters
 		i++;
+
 	if (str[i] == '-')
 	{
 		sign = -1;
@@ -32,6 +34,12 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
+
+	// "1234abc" -> 1234
+	//10 + 2 = 12
+	//12 * 10 + 3 = 123
+	//123 * 10 + 4 = 1234
+
 	while (ft_isdigit(str[i]))
 	{
 		result *= 10;
@@ -40,12 +48,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-// int main(void)
-// {
-// 	printf("%d\n", ft_atoi("   42"));
-// 	// printf("%d\n", ft_atoi("-123"));
-// 	// printf("%d\n", ft_atoi("+7"));
-// 	// printf("%d\n", ft_atoi("   \t\n56abc"));
-// 	// printf("%d\n", ft_atoi("abc"));
-// }

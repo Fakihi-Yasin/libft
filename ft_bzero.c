@@ -11,24 +11,17 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n) // size_t is an unsigned integer type
 {
 	char	*str;
-    if (!s)
+    if (!s || n == 0 || *(char*)s == '\0')
         return;
 	str = (char *)s;
+
 	while (n > 0)
 	{
 		*(str++) = 0;
 		n--;
 	}
 }
-
-// int main (){
-//     char str[] = "yassin";
-//     printf("%s\n", str);
-//     ft_bzero(str, sizeof(char *));
-//     printf("%s\n", str);
-// }

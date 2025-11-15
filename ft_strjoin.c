@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:13:56 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/13 05:46:23 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 20:01:30 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	res = ft_calloc(len + 1, sizeof(char));
+	res = malloc(len + 1);
+	if (!res)
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		res[i] = s1[i];
@@ -48,6 +50,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 //     joined = ft_strjoin(s1, s2);
 //     printf("Result: %s\n", joined);
 
-//     free(joined); // always free the memory after use
+//     free(joined);
 //     return (0);
 // }

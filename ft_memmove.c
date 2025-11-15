@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:47:01 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 23:23:38 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 11:31:42 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (dst > src)
+	unsigned char	*d;
+	unsigned char	*s;
+
+	if (!dst || !src || len == 0)
+		return (dst);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (d > s)
 	{
 		while (len--)
-			*((char *)dst + len) = *((char *)src + len); // * dereference to get the value at the address
+			d[len] = s[len];
 	}
 	else
-		ft_memcpy(dst, src, len);
+		ft_memcpy(d, s, len);
 	return (dst);
 }

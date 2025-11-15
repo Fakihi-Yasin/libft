@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:43:43 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/13 06:35:30 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 11:08:21 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_atoi(const char *str)
 {
-	int				i; 			// index to traverse the string
-	int				sign;		// to save the sign of the number
+	int				i;
+	int				sign;
 	unsigned long 	result; 	// save to theme values // insigned long to aviod overflow // 8 baytes in - 64bits
 
-	if (!str|| str[0] == '\0') 	// protect against null pointer
+	if (!str|| str[0] == '\0')
 		return 0;
 
 	i = 0;
@@ -34,12 +34,6 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-
-	// "1234abc" -> 1234
-	//10 + 2 = 12
-	//12 * 10 + 3 = 123
-	//123 * 10 + 4 = 1234
-
 	while (ft_isdigit(str[i]))
 	{
 		result *= 10;
@@ -48,3 +42,8 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+// int main() {
+//     printf("%d\n", ft_atoi(" 5343"));
+//     return 0;
+// }

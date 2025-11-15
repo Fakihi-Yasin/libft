@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:08:06 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/12 20:57:56 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 21:36:07 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-
+	
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	if (n == 0)
 		return (0);
@@ -30,9 +32,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int main(void)
 // {
-//     printf("%d\n", ft_strncmp("Hello", "Hello", 5)); // 0 (pareils)
-//     printf("%d\n", ft_strncmp("Hello", "Helli", 5)); // >0 ('o' > 'i')
-//     printf("%d\n", ft_strncmp("Hell", "Hello", 5));  // <0 ('\0' < 'o')
+//     printf("%d\n", ft_strncmp("Hello", "Hello", 5));
+//     printf("%d\n", ft_strncmp("Hello", "Helli", 5));
+//     printf("%d\n", ft_strncmp("Hell", "Hello", 5));  
 //     printf("%d\n", ft_strncmp("Hello", "Hi", 1));
-// 0 (seulement 1 char: 'H' == 'H')
 // }

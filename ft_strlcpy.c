@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/06 00:47:42 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 17:18:24 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	i;
-
+	
+	if (!dst || !src)
+		return (0);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);

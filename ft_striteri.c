@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 13:30:10 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/13 05:35:55 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/15 16:57:43 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// pointer to func
-// ft_strmapi creates a new string
-
-// ft_striteri edits the original one
 
 // void	upper(unsigned int i, char *c)
 // {

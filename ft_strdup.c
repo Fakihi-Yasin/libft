@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 09:06:14 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 16:51:06 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 13:04:04 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strdup(const char *s1)
 	if (!s1)
 		return (NULL);
 	dest = (char *)malloc(ft_strlen(s1) + 1);
-	//protect if not enough memory available protects malloc failure
 	if (!dest)
 		return (NULL);
 	i = 0;

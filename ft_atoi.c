@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:43:43 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 11:08:21 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 09:12:50 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@ int	ft_atoi(const char *str)
 {
 	int				i;
 	int				sign;
-	unsigned long 	result; 	// save to theme values // insigned long to aviod overflow // 8 baytes in - 64bits
+	unsigned long	result;
 
-	if (!str|| str[0] == '\0')
-		return 0;
-
+	if (!str || str[0] == '\0')
+		return (0);
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r')) // skip whitespace characters
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
-
 	if (str[i] == '-')
 	{
 		sign = -1;

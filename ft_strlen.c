@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 09:52:15 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 09:28:09 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 size_t	ft_strlen(const char *a)
 {
 	size_t	i;
-	if(!a)
-		return(0);
+
+	if (!a)
+		return (0);
 	i = 0;
 	while (a[i])
 		i++;

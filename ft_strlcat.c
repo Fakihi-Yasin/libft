@@ -6,45 +6,42 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:42:23 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 19:59:22 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 11:57:42 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+
+size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
-	size_t	d_len;
-	size_t	s_len;
-	size_t	l_retu;
+	size_t	j;
+	size_t	dest_len;
+	size_t	src_len;
 
-	if (!dst && dstsize == 0)
+	src_len = ft_strlen(src);
+	dest_len = ft_strlen(dest);
+	if (!dest && destsize == 0)
 		return (ft_strlen(src));
-	i = 0;
-	d_len = ft_strlen(dst);
-	s_len = ft_strlen(src);
-	if (dstsize >= d_len)
-		l_retu = s_len + d_len;
-	else
-		l_retu = s_len + dstsize;
-	if (dstsize == 0 || !dst)
-		return (l_retu);
-	while (src[i] != '\0' && d_len < dstsize - 1)
+	if (destsize <= dest_len)
+		return (destsize + src_len);
+	i = dest_len;
+	j = 0;
+	while (i < destsize - 1 && src[j])
 	{
-		dst[d_len] = src[i];
+		dest[i] = src[j];
 		i++;
-		d_len++;
+		j++;
 	}
-	dst[d_len] = '\0';
-	return (l_retu);
+	dest[i] = '\0';
+	return (dest_len + src_len);
 }
 
 // int main() {
-// 	char dest[20] = "";
+// 	char dest[20] = "y";
 //     const char *src = "hello world";
-//     ft_strlcat(dest, src, 12);
+//     ft_strlcat(dest, src, 8);
 //     printf("dest: %s\n", dest);
-//     printf("%zu",  ft_strlcat(dest, src, 11));
+//     printf("%zu",  ft_strlcat(dest, src, 13));
 //     return 0;
 // }

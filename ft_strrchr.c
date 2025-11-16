@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 09:04:33 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 22:02:57 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 13:03:48 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*ft_strrchr(const char *s, int c)
 			searchchar = (char *)&s[i];
 		i++;
 	}
-// check for '\0'
 	if (s[i] == c_char)
 		searchchar = (char *)&s[i];
 	return (searchchar);

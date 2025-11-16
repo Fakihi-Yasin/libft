@@ -6,42 +6,37 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:57:01 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/10/27 11:38:07 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 11:50:20 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	char	*new;
-	size_t	slen;
-	size_t	finish;
+	size_t	i;
+	char	*str;
 
 	if (!s)
-		return (0);
-	slen = ft_strlen(s);
-	if (start >= slen)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		new = (char *)malloc(sizeof(char) * 1);
-		if (!new)
-			return (0);
-		new[0] = '\0';
-		return (new);
+		str[i] = s[i + start];
+		i++;
 	}
-	finish = 0;
-	if (start < slen)
-		finish = slen - start;
-	if (finish > len)
-		finish = len;
-	new = (char *)malloc(sizeof(char) * (finish + 1));
-	if (!new)
-		return (0);
-	ft_strlcpy(new, s + start, finish + 1);
-	return (new);
+	return (str);
 }
-//////// 	if (len > ft_strlen(s + start))
-// s + start ma kayjme3ch string,
-// hiya pointer katbdé t9ra mn dak l index li 3titi.
 
-// So if start = 5, s + 5 → tbdé t9ra mn character numéro 5 f s.
+// int main() {
+//     const char *str = "Hello, World!";
+//     printf("%s\n", ft_substr(str, 1, 5));
+//     return 0;
+// }

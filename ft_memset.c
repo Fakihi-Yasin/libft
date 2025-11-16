@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:03:02 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 11:46:25 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 09:28:32 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
 	size_t			i;
-	
+
 	if (!b || len == 0)
 		return (b);
 	p = (unsigned char *)b;

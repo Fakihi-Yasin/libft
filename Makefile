@@ -15,8 +15,6 @@ all : $(NAME)
 $(NAME) : $(src_o)
 	ar rc $(NAME) $(src_o)
 
-bonus :  $(src_bo)
-	ar rc $(NAME) $(src_bo)
 	
 clean :
 	rm -f $(src_o) $(src_bo)

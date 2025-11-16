@@ -6,7 +6,7 @@
 /*   By: yafakihi <yafakihi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:08:06 by yafakihi          #+#    #+#             */
-/*   Updated: 2025/11/15 21:36:07 by yafakihi         ###   ########.fr       */
+/*   Updated: 2025/11/16 09:26:27 by yafakihi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	if (!s1 || !s2)
 		return (0);
 	i = 0;
